@@ -1,14 +1,13 @@
-items = input().split()
-freq = {}
-for x in items:
-    freq[x] = freq.get(x, 0) + 1
-print("Purchase frequency:")
-for k, v in freq.items():
-    print(f"{k}: {v}")
-max_item = max(freq, key=freq.get)
-print("\nMost popular item:", max_item)
-once = [k for k, v in freq.items() if v == 1]
-print("\nPurchased once:", " ".join(once))
-print("\nSorted by frequency:")
-for k, v in sorted(freq.items(), key=lambda x: -x[1]):
-    print(k, v)
+def all_eq(lst):
+    max_len = 0
+    for s in lst:
+        if len(s) > max_len:
+            max_len = len(s)
+
+    new_list = []
+    for s in lst:
+        while len(s) < max_len:
+            s += "_"
+        new_list.append(s)
+    return new_list
+print(all_eq(["cat", "dog", "elephant", "fox"]))

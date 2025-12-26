@@ -1,12 +1,15 @@
-def all_eq(lst):
-    max_len = 0
-    for s in lst:
-        if len(s) > max_len:
-            max_len = len(s)
-    new_list = []
-    for s in lst:
-        while len(s) < max_len:
-            s += "_"
-        new_list.append(s)
-    return new_list
-print(all_eq(["wahahahahaha", "meow", "yo"]))
+letters = set("ABCEHKMOPTXY")
+n = int(input())
+
+for i in range(n):
+    plate = input().strip()
+
+    meow = (
+        len(plate) == 6 and
+        plate[0] in letters and
+        plate[4] in letters and
+        plate[5] in letters and
+        plate[1:4].isdigit()
+    )
+
+    print("Yes" if meow else "No")

@@ -1,13 +1,17 @@
-eq = input().strip()
-a, op, b, _, c = eq
-def val(x):
-    return int(x)
-if a == 'x':
-    b, c = val(b), val(c)
-    print(c - b if op == '+' else b - c)
-elif b == 'x':
-    a, c = val(a), val(c)
-    print(c - a if op == '+' else a - c)
-else:
-    a, b = val(a), val(b)
-    print(a + b if op == '+' else a - b)
+a = input().strip()
+b = input().strip()
+
+n = len(a)
+m = len(b)
+
+shifts = set()
+bb = b + b
+
+for i in range(m):
+    shifts.add(bb[i:i+m])
+
+ans = 0
+for i in range(n - m + 1):
+    if a[i:i+m] in shifts:
+        ans += 1
+print(ans)
