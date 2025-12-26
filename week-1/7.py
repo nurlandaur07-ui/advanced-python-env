@@ -1,4 +1,7 @@
-w = input()
-n = int(input())
-for c in w:
-    print(c * n)
+a = float(input())
+op = input()
+b = float(input())
+if op == '+': print(a + b)
+elif op == '-': print(a - b)
+elif op == '*': print(a * b)
+elif op == '/': print(a / b if op == '/' and b != 0 else "Error")

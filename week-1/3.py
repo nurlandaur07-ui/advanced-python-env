@@ -1,2 +1,4 @@
-n = int(input())
-print(n * (n + 1) // 2 if n >= 1 else -(-n * (n - 1) // 2))
+a = float(input())
+i = int(a)
+f = a - i
+print(f * 100 + i / 100)
