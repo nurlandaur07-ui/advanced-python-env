@@ -1,4 +1,7 @@
-a = float(input())
-i = int(a)
-f = a - i
-print(f * 100 + i / 100)
+A = float(input())
+
+integer = int(A)
+fraction = A - integer
+
+result = fraction * 100 + integer / 100
+print(result)
