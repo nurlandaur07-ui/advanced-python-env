@@ -1,0 +1,8 @@
+Total number of lines: 1
+Total number of words: 11
+Word frequencies:
+dog: 2
+eshkere: 1
+lmao: 2
+lol: 4
+xd: 2
